@@ -38,7 +38,7 @@ Only authenticated users can create listings and send messages. Auth state is ma
 - Cursor AI
 
 
-Live product: 
+Live product: https://mwanga-farm.vercel.app/
 
 ---
 
