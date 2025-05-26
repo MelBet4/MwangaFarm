@@ -1,12 +1,11 @@
-// Remove module imports since we're using the compat version
 // Initialize Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyAK9kzIVTtMtfhrfDHRhUtsuB20v4EGfs4",
-    authDomain: "mwangafarm-684df.firebaseapp.com",
-    projectId: "mwangafarm-684df",
-    storageBucket: "mwangafarm-684df.firebasestorage.app",
-    messagingSenderId: "696230218177",
-    appId: "1:696230218177:web:95cef373255ccf41d74740"
+    apiKey: "####",
+    authDomain: "#####",
+    projectId: "#####",
+    storageBucket: "####",
+    messagingSenderId: "###",
+    appId: "####"
 };
 
 // Initialize Firebase with error handling
