@@ -808,4 +808,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+const toggleBtn = document.getElementById('themeToggleBtn');
+const themeIcon = document.getElementById('themeIcon');
+const themeLabel = document.getElementById('themeLabel');
+
+function applyTheme(isDark) {
+  if (isDark) {
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+    themeIcon.style.color = 'white';
+    themeLabel.textContent = 'Light Mode';
+    themeLabel.style.color = 'lightgray';
+    toggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
+  } else {
+    themeIcon.classList.replace('fa-sun', 'fa-moon');
+    themeIcon.style.color = 'white';
+    themeLabel.textContent = 'Dark Mode';
+    themeLabel.style.color = 'lightgray';
+    toggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
+  }
+}
+
+applyTheme(document.body.classList.contains('dark-theme'));
+
+toggleBtn.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark-theme');
+  applyTheme(isDark);
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+
+
 console.log('Application initialization complete');
