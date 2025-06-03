@@ -14,6 +14,29 @@
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
+/* Dark theme styles for Contact section */
+body.dark-theme .contact {
+  background-color: #121914; /* overall background if needed */
+}
+
+body.dark-theme .contact .info-item {
+  background-color: #0f2e17; /* darker greenish div background */
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+body.dark-theme .contact .info-item i,
+body.dark-theme .contact .info-item h3 {
+  color: #e0e0e0; /* whitish-gray for icons and h3 */
+}
+
+body.dark-theme .contact .info-item p {
+  color: #c2c2c2; /* light gray for paragraph text */
+}
+body.dark-theme .testimonial-author h4 {
+  color: #8abbd9; /* a soft light blue */
+}
 .dark-theme .about,
 .dark-theme .about > * {
   background-color: var(--light-color);
@@ -97,6 +120,17 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+}
+
+body.dark-theme .auth-links a {
+  font-weight: 800;
+  color: gray;
+}
+body.dark-theme .modal-content h2 {
+  color: lightgray; 
+}
+body.dark-theme .modal-content {
+  background-color: #263f2a;
 }
 
 /* Dark theme overrides */
