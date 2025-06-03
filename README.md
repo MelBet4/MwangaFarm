@@ -44,4 +44,5 @@ Live product: https://mwanga-farm.vercel.app/
 
 **MwangaFarm – Harvest the Future.**
 Melanie Chebet. 
+PR Lincoln Madaraka 
 May 2025.
