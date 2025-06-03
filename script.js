@@ -808,4 +808,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+
+themeToggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+  if (document.body.classList.contains('dark-theme')) {
+    themeToggleBtn.textContent = 'Light Mode';
+  } else {
+    themeToggleBtn.textContent = 'Dark Mode';
+  }
+});
+
 console.log('Application initialization complete');

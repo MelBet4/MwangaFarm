@@ -20,7 +20,7 @@ MwangaFarm is a web platform that connects local farmers in Kenya with urban con
 ## Project Structure
 - `index.html` – Main landing page
 - `styles.css` – All UI styling
-- `main.js` – Handles listing generation, UI logic, Firebase, and auth
+- `script.js` – Handles listing generation, UI logic, Firebase, and auth
 - `firebase-config.js` – Firebase setup file
 - `prompt.txt` - Prompts used
 

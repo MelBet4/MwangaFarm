@@ -14,6 +14,49 @@
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
+.dark-theme .about,
+.dark-theme .about > * {
+  background-color: var(--light-color);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.dark-theme {
+  --primary-color: #81c784;          /* lighter green */
+  --secondary-color: #66bb6a;        /* medium green */
+  --accent-color: #aed581;           /* light green */
+  --light-color: #2a2a2a;            /* dark gray background */
+  --background-color: #121212;       /* almost black background */
+  --text-color: #e0e0e0;             /* light gray text */
+  --text-light: #a5a5a5;             /* medium gray text */
+  --border-radius: 8px;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* stronger shadow */
+  --transition: all 0.3s ease;
+}
+
+/* Apply background and text color globally */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+/* Example of background override on some elements */
+.marketplace,
+.about,
+.contact,
+.testimonial-card,
+.listing-card,
+.contact-form,
+.info-item,
+.messages-list,
+.modal-content {
+  background-color: var(--light-color);
+  color: var(--text-color);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
 
 * {
     margin: 0;
@@ -27,6 +70,117 @@ body {
     color: var(--text-color);
     line-height: 1.6;
 }
+
+/* Dark theme overrides */
+body.dark-theme {
+  --background-color: #121914;
+  --text-color: #d0f0c0;
+  --text-light: #a0c48f;
+  --primary-color: #1b4517;
+  --secondary-color: #2e7d32;
+  --accent-color: #a4c639;
+}
+
+/* Make sure elements using variables update automatically */
+body.dark-theme header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+body.dark-theme .logo i {
+  color: var(--accent-color);
+}
+
+body.dark-theme .nav-links a {
+  color: white;
+}
+
+body.dark-theme .nav-links a:hover,
+body.dark-theme .nav-links a.active {
+  color: var(--accent-color);
+  background-color: rgba(255 255 255 / 0.1);
+}
+
+body.dark-theme .bar {
+  background-color: white;
+}
+
+body.dark-theme .btn {
+  background-color: var(--accent-color);
+  color: #121914;
+}
+
+/* Body background and text */
+body.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+body.dark-theme header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  box-shadow: none; /* optional */
+}
+
+body.dark-theme .logo h1,
+body.dark-theme .nav-links a {
+  color: var(--text-color);
+}
+
+body.dark-theme .bar {
+  background-color: var(--accent-color);
+}
+
+/* Override white backgrounds for cards, forms, etc */
+body.dark-theme .feature-card,
+body.dark-theme .listing-form,
+body.dark-theme form,
+body.dark-theme .listing-card,
+body.dark-theme .testimonial-card {
+  background-color: var(--dark-card-bg, #1e2b20); /* choose a nice dark bg */
+  color: var(--text-color);
+  box-shadow: none; /* optionally remove or soften */
+  border: 1px solid var(--secondary-color);
+}
+
+/* Override borders and inputs */
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+  background-color: #1e2b20;
+  border: 1px solid var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Buttons in dark mode */
+body.dark-theme .btn {
+  background-color: var(--accent-color);
+  color: #121914; /* dark text on light green */
+  box-shadow: none;
+}
+
+body.dark-theme .btn-secondary {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+body.dark-theme .btn-secondary:hover {
+  background-color: var(--accent-color);
+  color: #121914;
+}
+
+/* Fix hero section overlay to not be too bright */
+body.dark-theme .hero {
+  background: linear-gradient(rgba(30, 43, 32, 0.9), rgba(30, 43, 32, 0.95)), url('https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=60');
+  color: var(--text-color);
+}
+
+/* Links inside nav */
+body.dark-theme .nav-links a:hover,
+body.dark-theme .nav-links a.active {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: var(--accent-color);
+}
+
 
 
 /* Header and Navigation */
