@@ -808,15 +808,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const themeToggleBtn = document.getElementById('themeToggleBtn');
 
-themeToggleBtn.addEventListener('click', () => {
+const toggleBtn = document.getElementById('themeToggleBtn');
+const themeIcon = document.getElementById('themeIcon');
+
+toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
+
+  // Check if dark-theme is active and switch icon accordingly
   if (document.body.classList.contains('dark-theme')) {
-    themeToggleBtn.textContent = 'Light Mode';
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+    toggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
   } else {
-    themeToggleBtn.textContent = 'Dark Mode';
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
+    toggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
   }
 });
+
 
 console.log('Application initialization complete');
