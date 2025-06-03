@@ -19,6 +19,12 @@
   background-color: var(--light-color);
   color: var(--text-color);
   transition: var(--transition);
+}  
+body.dark-theme .about h2 {
+  background-color: #102e1a;
+}
+body.dark-theme .about-text {
+  background-color: #102e1a;
 }
 
 .dark-theme {
@@ -154,6 +160,7 @@ body.dark-theme .bar {
 
 /* Override white backgrounds for cards, forms, etc */
 body.dark-theme .feature-card,
+body.dark-theme .feature,
 body.dark-theme .listing-form,
 body.dark-theme form,
 body.dark-theme .listing-card,
@@ -164,6 +171,15 @@ body.dark-theme .testimonial-card {
   border: 1px solid var(--secondary-color);
 }
 
+body.dark-theme .feature i,
+body.dark-theme .feature h3 {
+  color: var(--text-color); 
+}
+
+body.dark-theme .feature-card i,
+body.dark-theme .feature-card h3 {
+  color: var(--text-color); /* or #fff if needed */
+}
 /* Override borders and inputs */
 body.dark-theme input,
 body.dark-theme textarea,
@@ -171,6 +187,16 @@ body.dark-theme select {
   background-color: #1e2b20;
   border: 1px solid var(--secondary-color);
   color: var(--text-color);
+}
+body.dark-theme h2 {
+  color: var(--text-color);
+}
+body.dark-theme section:nth-of-type(even) {
+  background-color: #102e1a;
+}
+
+body.dark-theme section:nth-of-type(odd) {
+  background-color: #0e2716;
 }
 
 /* Buttons in dark mode */
