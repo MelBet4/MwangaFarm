@@ -808,24 +808,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
 const toggleBtn = document.getElementById('themeToggleBtn');
 const themeIcon = document.getElementById('themeIcon');
+const themeLabel = document.getElementById('themeLabel');
 
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-theme');
-
-  // Check if dark-theme is active and switch icon accordingly
-  if (document.body.classList.contains('dark-theme')) {
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
+function applyTheme(isDark) {
+  if (isDark) {
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+    themeIcon.style.color = 'white'; // sun color
+    themeLabel.textContent = 'Light Mode';
     toggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
   } else {
-    themeIcon.classList.remove('fa-sun');
-    themeIcon.classList.add('fa-moon');
+    themeIcon.classList.replace('fa-sun', 'fa-moon');
+    themeIcon.style.color = 'yellow'; // moon color
+    themeLabel.textContent = 'Dark Mode';
     toggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
   }
+}
+
+// On page load
+applyTheme(document.body.classList.contains('dark-theme'));
+
+// Toggle on click
+toggleBtn.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark-theme');
+  applyTheme(isDark);
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
+
 
 
 console.log('Application initialization complete');
