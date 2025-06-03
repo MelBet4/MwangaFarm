@@ -815,21 +815,21 @@ const themeLabel = document.getElementById('themeLabel');
 function applyTheme(isDark) {
   if (isDark) {
     themeIcon.classList.replace('fa-moon', 'fa-sun');
-    themeIcon.style.color = 'white'; // sun color
+    themeIcon.style.color = 'white';
     themeLabel.textContent = 'Light Mode';
+    themeLabel.style.color = 'lightgray';
     toggleBtn.setAttribute('aria-label', 'Switch to Light Mode');
   } else {
     themeIcon.classList.replace('fa-sun', 'fa-moon');
-    themeIcon.style.color = 'yellow'; // moon color
+    themeIcon.style.color = 'white';
     themeLabel.textContent = 'Dark Mode';
+    themeLabel.style.color = 'lightgray';
     toggleBtn.setAttribute('aria-label', 'Switch to Dark Mode');
   }
 }
 
-// On page load
 applyTheme(document.body.classList.contains('dark-theme'));
 
-// Toggle on click
 toggleBtn.addEventListener('click', () => {
   const isDark = document.body.classList.toggle('dark-theme');
   applyTheme(isDark);

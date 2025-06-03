@@ -158,7 +158,7 @@ body.dark-theme .listing-form,
 body.dark-theme form,
 body.dark-theme .listing-card,
 body.dark-theme .testimonial-card {
-  background-color: var(--dark-card-bg, #1e2b20); /* choose a nice dark bg */
+  background-color: var(--dark-card-bg, #0f2e17); /* choose a nice dark bg */
   color: var(--text-color);
   box-shadow: none; /* optionally remove or soften */
   border: 1px solid var(--secondary-color);
